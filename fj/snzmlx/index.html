@@ -158,3 +158,59 @@
 </body>
 
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <style>
+        #tb {
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+    <script src="Scripts/jquery-1.11.3.js"></script>
+    <script>
+        //文档就绪函数
+        $(function () {
+            //按钮点击事件
+            $("#btn1").click(function () {
+                var message = $("<tr><td>" + $("#name").val() + "</td><td>" + $("#txt").val() + "</td></tr>");
+                $("#tb").append(message);
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--评论表格-->
+    <table id="tb" rules="all">
+        <tr>
+            <td>
+                姓名：
+            </td>
+            <td>
+                评论：
+            </td>
+        </tr>
+    </table>
+    <!--写回复区-->
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td>
+                <input id="name" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                评论：
+            </td>
+            <td>
+                <textarea id="txt"></textarea>
+            </td>
+        </tr>
+    </table>
+    <!--提交按钮-->
+    <input id="btn1" type="button" value="提交" />
+</body>
+</html>
